@@ -14,10 +14,9 @@ define(["base/js/namespace", "base/js/events"], function (Jupyter, events) {
   var insert_cell = function () {
     Jupyter.notebook.insert_cell_above("code").set_text(cell_text);
     Jupyter.notebook.select_prev();
-    //Jupyter.notebook.execute_cell_and_select_below();
   };
   // Add Toolbar button
-  var planetJupyterButton = function () {
+  var sparkReadTransformSaveJupyterButton = function () {
     console.log();
     Jupyter.toolbar.add_buttons_group([
       Jupyter.keyboard_manager.actions.register(
@@ -33,7 +32,7 @@ define(["base/js/namespace", "base/js/events"], function (Jupyter, events) {
   };
   // Run on start add jupyter button
   function load_ipython_extension() {
-    planetJupyterButton();
+    sparkReadTransformSaveJupyterButton();
   }
   return {
     load_ipython_extension: load_ipython_extension,
